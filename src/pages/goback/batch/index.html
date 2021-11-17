@@ -1,0 +1,53 @@
+<go-nav @com="oa|links|l1"
+        l1="title:批量设置权限, link:/goback/batch/index"></go-nav>
+
+<style>
+    .gobui-permission .layui-form-checkbox {
+        margin-bottom: 10px;
+    }
+    .gobui-permission .layui-form-checkbox span {
+        color: #333 ;
+    }
+</style>
+
+<div class="gobui-content gobui-permission">
+    <form id="gobui-form-permission">
+        <table class="table table-bordered">
+            <tr>
+                <th width="50">操作</th>
+                <td>
+                    <label class="me-3"><input class="form-check-input" type="radio" name="type" value="1" checked> 增加</label>
+                    <label><input class="form-check-input" type="radio" name="type" value="2"> 删除</label>
+                </td>
+            </tr>
+            <tr>
+                <th>角色</th>
+                <td>
+                    [[ each roles ]]
+                    <label class="me-3"><input class="form-check-input" type="checkbox" name="role" value="[[ $value.id ]]"> [[ $value.name ]]</label>
+                    [[ /each ]]
+                </td>
+            </tr>
+        </table>
+
+        <table class="gobui-table table table-bordered table-hover">
+            [[ each groups ]]
+            <tr>
+                <th width="180">
+                    <button type="button" class="selectAll btn btn-sm btn-light" data-select="false">全选</button>
+                    [[ $value.name ]]
+                </th>
+                <td>
+                    [[ each gps[$value.id] ]]
+                    <label class="float-start me-3 mb-2">
+                        <input class="form-check-input" type="checkbox" name="permission" value="[[ $value.id ]]" >
+                        [[ $value.name ]]
+                    </label>
+                    [[/each]]
+                </td>
+            </tr>
+            [[ /each ]]
+        </table>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+<form id="gobui-pop-form">
+    <go-form-field name="username" label="账号" bind="username"></go-form-field>
+    <go-form-field name="name" label="名字" bind="name"></go-form-field>
+    <go-form-field name="phone" label="手机" bind="phone"></go-form-field>
+    <go-form-field name="password" label="密码"></go-form-field>
+    <go-form-select name="status" label="状态" bind="status" replace="@status@" source="statusNames"></go-form-select>
+    <go-form-rbox  name="roles" label="角色" bind="roles" source="roleNames"></go-form-rbox>
+    <go-form-rbox type="radio" name="is_super" label="超管" bind="is_super"
+                  @com="oa|data|o1,o2"
+                  o1="name:超级, val:1"
+                  o2="name:普通, val:0"></go-form-rbox>
+    <go-form-submit title="确认修改"></go-form-submit>
+</form>

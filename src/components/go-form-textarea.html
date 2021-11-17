@@ -1,0 +1,10 @@
+<div class="row mb-lg-3 {% if vform=='' %} gobui-form-group-v {% else %} gobui-form-group-h {% endif %}">
+    <label class="{% if vform=='' %} {% else %} col-2 {% endif %} col-form-label">{{ label }}</label>
+    <div class="{% if vform=='' %} {% else %} col {% endif %}">
+        <textarea @bind="{{ bind }}"
+                  name="{{ name }}"
+                  id="{{ id }}"
+                  class="form-control {{ class }}"
+                  placeholder="{{ placeholder }}">{{ value }}</textarea>
+    </div>
+</div>

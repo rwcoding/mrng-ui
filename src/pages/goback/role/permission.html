@@ -1,0 +1,37 @@
+<style>
+    .gobui-permission .layui-form-checkbox {
+        margin-bottom: 10px; 
+    }
+    .gobui-permission .layui-form-checkbox span {
+        color: #333 ;
+    }
+</style>
+
+<div class="gobui-content gobui-permission">
+    <h2 class="mb-2 mt-2">设置角色 <strong class="text-danger">[[ name ]]</strong> 权限</h2>
+    <form id="gobui-form-permission">
+        <table class="gobui-table table table-bordered table-hover">
+            [[ each groups ]]
+            <tr>
+                <th width="180">
+                    <button type="button" class="selectAll btn btn-sm btn-light" data-select="false">全选</button>
+                    [[ $value.name ]]
+                </th>
+                <td>
+                    [[ each gps[$value.id] ]]
+                    <label class="float-start me-3 mb-2">
+                    [[ if own.indexOf($value.permission) !== -1 ]]
+                    <input class="form-check-input" type="checkbox" name="permission" value="[[ $value.id ]]"  checked>
+                    [[ else ]]
+                    <input class="form-check-input" type="checkbox" name="permission" value="[[ $value.id ]]" >
+                    [[ /if ]]
+                    [[ $value.name ]]
+                    </label>
+                    [[/each]]
+                </td>
+            </tr>
+            [[ /each ]]
+        </table>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+</div>

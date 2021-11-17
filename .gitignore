@@ -1,0 +1,10 @@
+.idea
+.settings
+.vscode
+.project
+.parcel-cache
+node_modules
+
+!.gitkeep
+
+/tmp/*

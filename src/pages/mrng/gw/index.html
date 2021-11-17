@@ -1,0 +1,14 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1,b2"
+        l1="title:网关管理, link:/mrng/gw/index"
+        b1="title:添加网关, link:$mrng/gw/edit"
+        b2="title:同步网关, link:@mrng/gw/sync"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="name" type="text" @bind="name" placeholder="名称" class="form-control g-mw-150">
+        <input name="addr" type="text" @bind="addr" placeholder="地址" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

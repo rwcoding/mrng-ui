@@ -1,0 +1,13 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1"
+        l1="title:配置环境, link:/mrng/config/env/index"
+        b1="title:添加环境, link:$mrng/config/env/edit"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="name" type="text" @bind="name" placeholder="名称" class="form-control g-mw-150">
+        <input name="sign" type="text" @bind="sign" placeholder="标识" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

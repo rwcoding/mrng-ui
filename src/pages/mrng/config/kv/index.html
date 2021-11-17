@@ -1,0 +1,11 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1"
+        l1="title:数据库级配置缓存, link:/mrng/config/kv/index" ></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="k" type="text" @bind="k" placeholder="键名" class="form-control g-mw-200">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

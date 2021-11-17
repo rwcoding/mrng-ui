@@ -1,0 +1,32 @@
+<div class="row mb-lg-3 gobui-form-group-h">
+    <label class="col-2 col-form-label">{{ label }}</label>
+    <div class="col pt-1">
+        {% if source %}
+
+        [[ each {{source}} ]]
+        <label class="me-2 pt-1 form-check-label">
+            <input type="{{ type|default_if_none:'checkbox' }}"
+                   @bind="{{ bind }}"
+                   name="{{ name }}"
+                   class="form-check-input {{ class }}"
+                   value="[[ $index ]]">
+            [[ $value ]]
+        </label>
+        [[ /each ]]
+
+        {% else %}
+
+        {% for v in data %}
+        <label class="me-2 pt-1 form-check-label">
+        <input type="{{ type|default_if_none:'checkbox' }}"
+               @bind="{{ bind }}"
+               name="{{ name }}"
+               class="form-check-input {{ class }}"
+               value="{{ v.val }}">
+        {{ v.name }}
+        </label>
+        {% endfor %}
+
+        {% endif %}
+    </div>
+</div>

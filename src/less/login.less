@@ -1,0 +1,63 @@
+@loginHtmlBgColor: #f2f5f7;
+
+.gobui-html-login {
+  background: @loginHtmlBgColor;
+  min-height: 100%;
+}
+
+.gobui-login {
+  position: absolute;
+  z-index: 10;
+  width: 450px;
+  height: 342px;
+  left: 50%;
+  top: 20%;
+  margin-left: -225px;
+  border: solid 1px darken(@loginHtmlBgColor,5);
+  border-radius: 5px;
+  padding: 10px 30px 20px 30px;
+  background: #ffffff;
+  box-shadow:0 3px 8px darken(@loginHtmlBgColor,10);
+
+  .form {
+    .item {
+      position: relative;
+      margin-top: 20px;
+
+      input {
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        padding-left: 35px;
+        font-size: 16px;
+        border-width: 0 0 1px 0;
+        box-shadow: none;
+      }
+
+      img {
+        position: absolute;
+        border: 1px solid #efefef;
+        right: 0;
+      }
+
+      i {
+        position: absolute;
+        left: 8px;
+        font-size: 18px;
+        color: #c4e2f6;
+        top: 6px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}

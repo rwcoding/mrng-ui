@@ -1,0 +1,13 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1,b2"
+        l1="title:配置白名单, link:/mrng/config/white/index"
+        b1="title:添加白名单, link:$mrng/config/white/edit"
+        b1="title:从节点同步, link:@mrng/config/white/node"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="ip" type="text" @bind="ip" placeholder="ip" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

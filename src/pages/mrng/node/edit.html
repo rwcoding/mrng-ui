@@ -1,0 +1,12 @@
+<form id="go-pop-form">
+    <go-form-field name="name" label="名字" bind="name"></go-form-field>
+    <go-form-field name="addr" label="地址" bind="addr"></go-form-field>
+    <!--
+    <go-form-rbox type="radio" name="status" label="状态" bind="status"
+                  @com="oa|data|o1,o2"
+                  o1="name:上架, val:1"
+                  o2="name:下架, val:0"></go-form-rbox>
+    -->
+    <go-form-field name="weight" label="权重" bind="weight" value="1"></go-form-field>
+    <go-form-submit title="确认修改"></go-form-submit>
+</form>

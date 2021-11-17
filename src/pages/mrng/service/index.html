@@ -1,0 +1,21 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1"
+        l1="title:服务管理, link:/mrng/service/index"
+        b1="title:添加服务, link:$mrng/service/edit"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <select name="recycle" @bind="recycle" class="form-select g-mw-150">
+            <option value="0" selected>不含回收站</option>
+            <option value="1">包含回收站</option>
+        </select>
+        <input name="name" type="text" @bind="name" placeholder="名称" class="form-control g-mw-150">
+        <input name="sign" type="text" @bind="sign" placeholder="标识" class="form-control g-mw-150 me-3">
+        <span class="input-group-text">状态范围</span>
+        <input name="min" type="text" @bind="min" value="0" placeholder="" class="form-control g-mw-100">
+        <span class="input-group-text">--</span>
+        <input name="max" type="text" @bind="max" value="100" placeholder="" class="form-control g-mw-100 me-3">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

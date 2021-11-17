@@ -1,0 +1,21 @@
+<form class="input-group mb-3 w-75" id="gobui-pop-form">
+    <select name="size" @bind="size" class="form-select g-mw-200">
+        <option value="10">每页10条</option>
+        <option value="100">每页100条</option>
+        <option value="1000">每页1000条</option>
+        <option value="10000">每页10000条</option>
+    </select>
+    <select name="bind" @bind="bind" class="form-select g-mw-120">
+        <option value="0">-不限绑定-</option>
+        <option value="1">已绑定</option>
+        <option value="2">未绑定</option>
+    </select>
+    <input name="name" type="text" @bind="name" placeholder="名称" class="form-control g-mw-200">
+    <input name="addr" type="text" @bind="addr" placeholder="地址" class="form-control g-mw-200">
+    <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    <span class="input-group-text"> 批量操作=> </span>
+    <button type="button" data-to="bind" class="btn btn-primary btn-sm bind">绑定</button>
+    <button type="button" data-to="unbind" class="btn btn-danger btn-sm bind">解除</button>
+</form>
+<table id="gobui-pop-table" class="table table-bordered gobui-table table-hover"></table>
+<div id="gobui-pop-pager" class="float-end mt-2"></div>

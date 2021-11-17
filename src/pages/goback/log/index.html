@@ -1,0 +1,18 @@
+<go-nav @com="oa|links|l1"
+        l1="title:日志管理, link:/goback/log/index"></go-nav>
+
+
+<div id="gobui-content" class="mt-2">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <select class="form-control me-3" @bind="type" name="type">
+            <option value="0"> - 日志类型 - </option>
+        </select>
+        <span class="input-group-text">时间</span>
+        <input name="start" @bind="start" type="text" placeholder="开始" class="form-control">
+        <span class="input-group-text">-</span>
+        <input name="end" @bind="end" type="text" placeholder="结束" class="form-control">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

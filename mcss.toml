@@ -1,0 +1,17 @@
+debug     = true
+addr      = ":8090"
+view      = ["@src", "src/pages"]
+component = ["src/components"]
+
+[mcss]
+app = "MRNG管理系统"
+url = "http://127.0.0.1:8080/api"
+onlyGP = false
+
+[iset]
+bind = [ ["as", {class="gobui-bind"}], ["ds", {bind="@v"}] ]
+
+[script]
+watch = "parcel watch --no-autoinstall --no-source-maps src/index.js --cache-dir=tmp/cache --dist-dir=tmp/watch"
+build = "parcel build --no-autoinstall --no-source-maps src/index.js --cache-dir=tmp/cache --dist-dir=tmp/build"
+_boot = "watch"

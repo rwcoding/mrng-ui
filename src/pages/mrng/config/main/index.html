@@ -1,0 +1,14 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1,b2"
+        l1="title:配置列表, link:/mrng/config/main/index"
+        b1="title:添加配置, link:$mrng/config/main/edit"
+        b2="title:同步所有缓存, link:@mrng/config/main/sync"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="name" type="text" @bind="name" placeholder="配置名称" class="form-control g-mw-150">
+        <input name="k" type="text" @bind="k" placeholder="配置标识" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

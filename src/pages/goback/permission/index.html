@@ -1,0 +1,16 @@
+<go-nav @com="oa|links|l1,l2 || oa|btns|b1,b2,b3,b4"
+        l1="title:权限管理, link:/goback/permission/index"
+        l2="title:权限分组, link:/goback/permission/index?to=group"
+        b1="title:添加权限, link:$goback/permission/edit"
+        b2="title:添加分组, link:$goback/permission/group/edit"
+        b3="title:分组调整, link:$goback/permission/shift"
+        b4="title:初始化权限, link:@goback/permission/init" ></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="kw" type="text" @bind="kw" placeholder="权限标识" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>

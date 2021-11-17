@@ -1,0 +1,13 @@
+<div class="row mb-lg-3 {% if vform=='' %} gobui-form-group-v {% else %} gobui-form-group-h {% endif %}">
+    <label class="{% if vform=='' %} {% else %} col-2 {% endif %} col-form-label">{{ label }}</label>
+    <div class="{% if vform=='' %} {% else %} col {% endif %}">
+        <input type="{{ type |default_if_none: 'text'}}"
+               name="{{ name }}"
+               id="{{ id }}"
+               class="form-control {{ class }}"
+               value="{{ value }}"
+               @bind="{{ bind }}"
+               placeholder="{{ placeholder }}">
+    </div>
+</div>
+

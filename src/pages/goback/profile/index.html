@@ -1,0 +1,29 @@
+<go-nav @com="oa|links|l1,l2,l3"
+        l1="title:我的信息, link:/goback/profile/index"
+        l2="title:修改资料, link:/goback/profile/index?to=edit"
+        l3="title:修改密码, link:/goback/profile/index?to=password"></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <table class="table table-hover table-bordered">
+        <tr>
+            <td width="100">用户名</td>
+            <td @bind="username"></td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td @bind="name"></td>
+        </tr>
+        <tr>
+            <td>电话</td>
+            <td @bind="phone"></td>
+        </tr>
+        <tr>
+            <td>状态</td>
+            <td @bind="status"></td>
+        </tr>
+        <tr>
+            <td>角色</td>
+            <td @bind="roles"></td>
+        </tr>
+    </table>
+</div>

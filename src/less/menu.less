@@ -1,0 +1,99 @@
+@menuBgColor: #FBFBFB;
+@menuDtLeftBorder: 2px;
+@menuDtLeftBorderColor: #2884ff;
+
+@menuBgColor: #FBFBFB;
+@menuDtActiveBgColor:#e2e2e2;
+@menuDtActiveFontColor:#2196F3;
+@menuDdActiveColor:red;
+
+.gobui-menu {
+  position: fixed;
+  top: 40px;
+  width: 145px;
+  background: @menuBgColor;
+  min-height: 600px;
+  border-right: solid 1px darken(@menuBgColor, 5);
+  padding-right:10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 6px;
+  box-shadow:1px 0 4px darken(@menuBgColor, 6);
+
+  dl,dd,dt {
+    margin:0;
+  }
+
+  dl {
+    //display: none;
+
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      color: #666666;
+      font-size: 13px;
+      //letter-spacing:1px;
+    }
+    dt {
+      position: relative;
+
+      a {
+        border: solid 1px @menuBgColor;
+        border-left-width: @menuDtLeftBorder;
+        display: block;
+        padding: 8px 10px;
+        line-height: 20px;
+      }
+      a:hover {
+        background: @menuDtActiveBgColor;
+        color: @menuDtActiveFontColor;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-left-color: @menuDtLeftBorderColor;
+        border-left-width: @menuDtLeftBorder;
+      }
+      a>i {
+        padding-right: 5px;
+        font-size: medium;
+        float: right;
+      }
+
+      &.active {
+        a {
+          background: @menuDtActiveBgColor;
+          color: @menuDtActiveFontColor;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          border-left-color: @menuDtLeftBorderColor;
+          border-left-width: @menuDtLeftBorder;
+        }
+      }
+    }
+    
+    dd {
+      display: none;
+      background: @menuBgColor;
+      a {
+        display: block;
+        padding: 10px 0 6px 29px;
+      }
+      a:hover {
+        color: @menuDdActiveColor;
+        font-weight: 700;
+      }
+    }
+
+    dd:hover, dd.active {
+      a {
+        color: @menuDdActiveColor;
+        font-weight: 700;
+      }
+      a:after {
+        content: " →";
+      }
+    }
+  }
+
+
+}

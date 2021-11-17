@@ -1,0 +1,99 @@
+
+@headerBgColor: #16689c;
+@headerTextColor: #ffffff;
+@headerTextHoverColor: #fff;
+@headerHeight: 40px;
+@headerShadow:  #2974D1;
+
+.gobui-header {
+  position: relative;
+  user-select: none;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: @headerHeight;
+  line-height: @headerHeight;
+  color: @headerTextColor;
+  background: @headerBgColor;
+  width: 100%;
+  border-bottom: solid 1px lighten(@headerBgColor, 3);
+  box-shadow:0 2px 3px @headerShadow;
+  padding: 0 15px;
+
+  .logo {
+    float: left;
+    min-width: 130px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .menu {
+    //position: absolute;
+    //left: 50%;
+    //margin-left: -25%;
+    //width: 50%;
+    font-size: 0;
+    text-align: center;
+    float: left;
+    margin-left: 40px;
+
+    a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      height: 100%;
+      padding: 0 20px;
+      letter-spacing:2px;
+      font-size: 16px;
+      border-left:1px solid darken(@headerBgColor,4);
+      border-right:1px solid lighten(@headerBgColor,3);
+    }
+    //a:first-of-type {
+    //    border-left-width: 0;
+    //}
+    a:last-of-type {
+      border-right-width:0;
+    }
+    a.active {
+      //background: darken(@headerBgColor,6);
+      background: #043c61b0;
+      font-weight: 700;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+      //border:0;
+    }
+    a:hover {
+      //background: darken(@headerBgColor,3);
+      //background: #1888D0;
+      font-weight: 700;
+    }
+  }
+
+  .profile {
+    position: absolute;
+    right: 45px;
+    top: 0;
+
+    .username {
+      cursor: pointer;
+      color: white;
+      padding: 0 10px;
+      letter-spacing:3px;
+      &:hover {
+        background: darken(@headerBgColor,10);
+      }
+    }
+  }
+}
+
+//用户名下拉列表
+.gobui-dd-profile {
+  li:last-of-type {
+    color: red;
+    .layui-menu-body-title {
+      padding-left: 20px;
+    }
+    i {
+      left: 0;
+    }
+  }
+}

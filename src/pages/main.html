@@ -1,0 +1,33 @@
+<div id="gobui-header" class="gobui-header">
+    <div class="logo">{{ mcss.app }}</div>
+    <div class="dropdown float-end">
+        <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="userProfileName"
+                data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="userProfileName">
+            <li><a class="dropdown-item" href="/goback/profile/index">我的个人信息</a></li>
+            <li><a class="dropdown-item" href="/goback/profile/index?to=password">修改密码</a></li>
+            <li><a class="dropdown-item text-danger" href="@/logout"><i class="bi bi-person-dash-fill"></i> 退出</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div id="gobui-menu" class="gobui-menu py-2 mb-4">
+    <dl>
+    [[ each menus v1 k1 ]]
+        <dt class="menu-item" data-index="[[ k1 ]]">
+            <a href="#">[[ v1['name'] ]] <i class="bi small bi-caret-down-fill"></i></a>
+        </dt>
+        [[ each v1['tree'] ]]
+        <dd class="menu-item menu-index-[[ k1 ]] [[ $value['sign'] ]]">
+            <a href="[[ $value['link'] ]]">[[ $value['name'] ]]</a>
+        </dd>
+        [[ /each ]]
+    [[ /each ]]
+    </dl>
+</div>
+
+<div id="gobui-main" class="gobui-main">
+
+</div>

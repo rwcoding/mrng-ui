@@ -1,0 +1,14 @@
+<form id="go-pop-form">
+    <go-form-field name="name" label="名字" bind="name"></go-form-field>
+    <go-form-select name="env" bind="env" label="环境" source="envNames"></go-form-select>
+    <go-form-select name="project" bind="project" label="工程" source="projectNames"></go-form-select>
+    <go-form-field name="k" label="键" bind="k"></go-form-field>
+    <go-form-field name="v" label="值" bind="v"></go-form-field>
+    <!--
+    <go-form-rbox type="radio" name="status" value="0" label="发布" bind="status"
+                  @com="oa|data|o1,o2"
+                  o1="name:直接发布, val:1"
+                  o2="name:稍后发布, val:0"></go-form-rbox>
+    -->
+    <go-form-submit title="确认修改"></go-form-submit>
+</form>

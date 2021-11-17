@@ -1,0 +1,45 @@
+@nColor: #145ccd;
+
+.gobui-nav {
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: solid 1px #e9eaf3;
+  margin-top: 8px;
+
+  .title {
+    font-size: 16px;
+  }
+
+  .links {
+    a {
+      display: inline-block;
+      padding: 0 10px;
+      margin-right: 10px;
+      color: #333333;
+      height: 39px;
+      text-decoration: none;
+    }
+
+    a.hover, a:hover {
+      color: @nColor;
+      border-bottom: solid 2px @nColor;
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: @nColor;
+    }
+  }
+
+  .btns {
+    position: absolute;
+    right: 19px;
+    top: 10px;
+
+    .hover {
+      color: red;
+      font-weight: 700;
+    }
+  }
+}

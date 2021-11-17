@@ -1,0 +1,24 @@
+<div class="gobui-login">
+    <h3 class="text-center text-primary mt-3">{{ mcss.app }}</h3>
+    <div class="form mt-3">
+        <form id="form-login" method="post">
+            <div class="item">
+                <i class="bi bi-person-lines-fill"></i>
+                <input id="username" name="username" class="form-control" type="text" placeholder="您的账号"/>
+            </div>
+            <div class="item">
+                <i class="bi bi-shield-fill-check"></i>
+                <input id="password2" name="password2" class="form-control" type="password" placeholder="您的密码"/>
+            </div>
+            <div class="item">
+                <i class="bi bi-code-slash"></i>
+                <img title="点击刷新" id="captchaImage" src="" alt="">
+                <input id="code" name="code" type="text" class="form-control" placeholder="验证码"/>
+            </div>
+            <div class="item">
+                <button class="btn btn-primary">登录</button>
+            </div>
+        </form>
+    </div>
+    <div class="error mb-3" id="error"><span></span><span></span><span></span></div>
+</div>

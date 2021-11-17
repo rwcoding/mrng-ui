@@ -1,0 +1,23 @@
+<div class="row mb-lg-3 gobui-form-group-h">
+    <label class="col-2 col-form-label">{{ label }}</label>
+    <div class="col">
+        <select @bind="{{ bind }}"
+                name="{{ name }}"
+                id="{{ id }}"
+                class="form-select {{ class }}">
+            {% if source %}
+
+            [[ each {{source}} ]]
+            <option value="[[ $index ]]">[[ $value ]]</option>
+            [[ /each ]]
+
+            {% else %}
+
+            {% for v in options %}
+            <option value="{{ v.val }}" {% if value==v.val %} selected {% endif %}>{{ v.name }}</option>
+            {% endfor %}
+
+            {% endif %}
+        </select>
+    </div>
+</div>

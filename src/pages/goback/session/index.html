@@ -1,0 +1,15 @@
+<go-nav @com="oa|links|l1 || oa|btns|b1,b2,b3"
+        l1="title:会话管理, link:/goback/session/index"
+
+        b1="title:清空所有, link:@goback/session/clean?type=0"
+        b2="title:清空验证码, link:@goback/session/clean?type=2"
+        b3="title:清空用户会话, link:@goback/session/clean?type=1" ></go-nav>
+
+<div class="gobui-content" id="gobui-content">
+    <form class="input-group mb-3 w-75" id="gobui-form">
+        <input name="adminer_id" @bind="adminer_id" type="text" placeholder="管理员ID" class="form-control g-mw-150">
+        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+    </form>
+    <table id="gobui-table" class="table table-bordered gobui-table table-hover"></table>
+    <div id="gobui-pager" class="float-end mt-2"></div>
+</div>
